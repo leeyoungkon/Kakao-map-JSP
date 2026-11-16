@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS restaurant_map CHARACTER SET utf8mb4;
+USE restaurant_map;
+
+CREATE TABLE IF NOT EXISTS restaurants (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    review VARCHAR(500) NOT NULL,
+    latitude DOUBLE NOT NULL,
+    longitude DOUBLE NOT NULL,
+    photo_name VARCHAR(64) NOT NULL UNIQUE
+) DEFAULT CHARSET=utf8mb4;
